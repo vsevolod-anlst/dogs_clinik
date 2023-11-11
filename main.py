@@ -132,7 +132,7 @@ def post() -> Timestamp:
     return post_db[cnt_str_post_db]
 
 @app.get("/dogs", tags=["Dogs"], summary="Get Dogs")
-def get_many_dogs(kind='all') -> List[Dog]:
+def get_many_dogs(kind='all') -> list[Dog]:
     """
     # Метод вернет массив собак
     Метод проверяет переданную породу, и возвращает всех собак этой породы, или же возвращает всех собак, если порода не была передана. Если такая порода не поддерживается в БД, то метод вернет ошибку
